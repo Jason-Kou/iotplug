@@ -7,6 +7,9 @@ In this project, you will learn the basic concepts of IoT and get hands-on exper
 
 Here is the video to demonstrate this project in Chinese with some keynotes subtitle in English.
 
+[![Amazon IoT 云服务实例👏-Turns RF plug into an IoT smart plug with Amazon AWS IoT Core Service](https://img.youtube.com/vi/E7LaaKPGeuQ/0.jpg)](https://www.youtube.com/watch?v=E7LaaKPGeuQ)
+
+
 ## Table of Contents
 
 - [Background](#background)
@@ -140,7 +143,7 @@ $ python3 pubsub.py --topic topic_1 --root-ca ~/certs/Amazon-root-CA-1.pem --cer
 # ...
 ```
 
-### Modify the file `pubsub.py` in the sample folder and add the rpi-rf script into it. The infinity loop will receive published message from the IoT cloud through MQTT protocol. Base on the published message, this code will trigger the rpi-rf script to turn on or turn off the plug. Here is the code snippet. Please check out iot_plug.py in this repository for more details.
+### Modify the file `pubsub.py` in the sample folder and add the rpi-rf script into it. The infinity loop will receive published message from the IoT cloud through MQTT protocol. Base on the published message, this code will trigger the rpi-rf script to turn on or turn off the plug. Here is the code snippet. Please check out [iot_plug.py](raspberry_pi/iot_plug.py) in this repository for more details.
 
 ```python
 # RF control command send by rpi-rf 
