@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Demo Site of Iot Plug</title>
+  <style>
+        body {
+          font-family: Sans-Serif;
+        }
+        code.multiline {
+          display: block;
+          white-space: pre-wrap
+        }
+        td {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+  </style>
+</head>
+<body>
+{% block content %}
+<h1 align="center">San this QR code or click it to control the IoT Plug</h1>
+<p align ="center">
+<a href="https://fierce-headland-37752.herokuapp.com/control">
+  <img src="static/control.png"></a>
+{% endblock %}
+</p>
+</body>
+</html>

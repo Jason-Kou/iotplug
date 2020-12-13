@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Demo Site of IoT Plug</title>
+  <style>
+        body {
+          font-family: Sans-Serif;
+        }
+        code.multiline {
+          display: block;
+          white-space: pre-wrap
+        }
+        td {
+            padding-left: 20px;
+            padding-right: 20px;
+        } 
+        input {
+            width: 80%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            box-sizing: border-box;
+        }
+  </style>
+</head>
+<body>
+{% block content %}
+<h1 align="center">Click the button to control the IoT Plug</h1>
+<form align="center" action="control" method="post">
+    <input type="submit" name = "on_button" value="Turn On">
+    <input type="submit" name = "off_button" value="Turn Off">
+    </form>
+{% endblock %}
+</body>
+</html>
