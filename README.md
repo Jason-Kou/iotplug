@@ -1,6 +1,6 @@
 # Turns RF plug into AWS IoT device with Raspberry Pi
 
-Setup a Raspberry Pi as internet of things to connect to the [AWS IoT core](https://aws.amazon.com/iot-core/). And build a web page with two buttons to
+Setup a Raspberry Pi as internet of things to connect to the [AWS IoT core](https://aws.amazon.com/iot-core/) and build a web page with two buttons to
 trigger the [RF remote plug](https://www.amazon.com/JTD-Generation-Auto-programmable-Electrical-Appliances/dp/B01JPOUJN4/). The web page is built with [Django](https://www.djangoproject.com/) framework.
 
 In this project, you will learn the basic concepts of IoT and get hands-on experience about how to make communications between IoT thing and AWS IoT Core service.
@@ -23,16 +23,16 @@ Here is the video to demonstrate this project in Chinese with some keynotes subt
 
 ## Background
 
-The RF plug is a power outlet controlled by a remote running under a radio frequency of 315/433mHz. But it does not support "cell phone control" through the internet Also, I want to learn how to build IoT service with Amazon AWS, so I started this project. The final result is to use cell phone to scan a QR code, then a webpage with 'On' and 'Off' buttons will show on the phone. You can click the On/Off button to control the RF plug.
+The RF plug is a power outlet controlled by a remote running under a radio frequency of 315/433mHz; but it does not support "cell phone control" through the internet. I want to learn how to build IoT service with Amazon AWS, so I started this project. The final result is to use cell phone to scan a QR code, then a webpage with 'On' and 'Off' buttons will show on the phone. You can click the On/Off button to control the RF plug.
 
-The structure of the project is like this:
+The structure of the project likes below:
 
 
 ![](img/overall.png)
 
 ## Hardware
 
-1. Raspberry Pi (the one I have is [Pi 3 Model B](https://www.amazon.com/dp/B01LPLPBS8/))
+1. Raspberry Pi (the one I used is [Pi 3 Model B](https://www.amazon.com/dp/B01LPLPBS8/))
 
 2. RF plug https://www.amazon.com/dp/B01JPOUJN4/
 3. FR Module, you can find it in many places at a very low price https://www.amazon.com/dp/B01DKC2EY4
@@ -186,7 +186,7 @@ The Pi is already connected to the IoT Core service with MQTT protocol and wait 
 ![](img/connect-endpoint.jpg)
 
 
-I used Heroku to deploy the Django server. Here is the instruction: [heroku / python-getting-started](https://github.com/heroku/python-getting-started). After you have the Django webserver running, we can start to build the IoT Plug app. You can find the source code in the django folder.
+I used Heroku to deploy the Django server. Here is the instruction: [heroku / python-getting-started](https://github.com/heroku/python-getting-started). After you have the Django webserver running, we can start building the IoT Plug app. You can find the source code in the django folder.
 
 1. Create a Django app called 'iotplug'
 
@@ -220,23 +220,11 @@ def control_plug(command):
 3. Build the control.html template with two buttons to trigger the HTTPS requests
 ![](img/control.jpg)
 
-4. [optional] Build the qrcode.html to show a QR code to link to the control.html. It's very convenient for the user to have a quick access the control page by scanning the QR code.
+4. [optional] Build the qrcode.html to show a QR code to link to the control.html. It's very convenient for the user to have a quick access to the control page by scanning the QR code.
 ![](img/qr.jpg)
 
 
 ## Final Test
 
-Use the cellphone to open the control page or scan the QR code page to lead you to this page. And click the on or off button, you are able to control the plug through AWS IoT Core Service.
-
-
-
-
-
-
-
-
-
-
-
-
+Use the cellphone to open the control page or scan the QR code page to lead you to this page. Click the on or off button, you are able to control the plug through AWS IoT Core Service.
 
